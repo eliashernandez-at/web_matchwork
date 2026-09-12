@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html class="light" lang="en" style="">
+
+<head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>MatchWork</title>
+        <link rel="icon" href="./favicon.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap"
+                rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-surface-variant": "#c4c9af",
+                                                "on-tertiary-fixed-variant": "#454268",
+                                                "on-tertiary-container": "#5b587f",
+                                                "tertiary-fixed-dim": "#c6c2ef",
+                                                "off-white": "#F5F3EE",
+                                                "on-secondary": "#30312e",
+                                                "error": "#ffb4ab",
+                                                "vibrant-lime": "#B8E62E",
+                                                "inverse-on-surface": "#2e3037",
+                                                "surface-container-highest": "#32353c",
+                                                "secondary-fixed": "#e4e2dd",
+                                                "primary-fixed-dim": "#a9d619",
+                                                "primary-fixed": "#c4f33c",
+                                                "outline-variant": "#444935",
+                                                "dark-slate": "#0E1117",
+                                                "tertiary": "#f5f0ff",
+                                                "secondary": "#c8c6c2",
+                                                "primary": "#deff86",
+                                                "on-tertiary-fixed": "#1a173a",
+                                                "on-background": "#e1e2eb",
+                                                "on-tertiary": "#2f2c50",
+                                                "primary-container": "#b8e62e",
+                                                "on-primary-container": "#4d6400",
+                                                "surface-tint": "#a9d619",
+                                                "on-secondary-fixed": "#1b1c19",
+                                                "surface-bright": "#363940",
+                                                "surface-dim": "#101319",
+                                                "surface-container-low": "#191c22",
+                                                "on-error-container": "#ffdad6",
+                                                "surface": "#101319",
+                                                "inverse-primary": "#4f6600",
+                                                "error-container": "#93000a",
+                                                "surface-variant": "#32353c",
+                                                "secondary-fixed-dim": "#c8c6c2",
+                                                "on-primary": "#273500",
+                                                "on-secondary-fixed-variant": "#474744",
+                                                "secondary-container": "#494946",
+                                                "on-primary-fixed": "#161f00",
+                                                "outline": "#8e937b",
+                                                "surface-container-lowest": "#0b0e14",
+                                                "on-surface": "#e1e2eb",
+                                                "background": "#101319",
+                                                "surface-container-high": "#272a31",
+                                                "inverse-surface": "#e1e2eb",
+                                                "surface-container": "#1d2026",
+                                                "on-secondary-container": "#b9b8b4",
+                                                "on-error": "#690005",
+                                                "tertiary-fixed": "#e4dfff",
+                                                "tertiary-container": "#d6d1ff",
+                                                "on-primary-fixed-variant": "#3b4d00"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "margin-mobile": "16px",
+                                                "gutter-desktop": "24px",
+                                                "margin-desktop": "80px",
+                                                "gutter-mobile": "16px",
+                                                "container-max": "1280px",
+                                                "section-md": "64px",
+                                                "base": "8px",
+                                                "section-lg": "100px"
+                                        },
+                                        "fontFamily": {
+                                                "body-md": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "Outfit"
+                                                ],
+                                                "body-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "label-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-sm": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "label-sm": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-xl": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-md": [
+                                                        "Outfit"
+                                                ],
+                                                "body-sm": [
+                                                        "Outfit"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "24px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "48px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "20px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-lg": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-sm": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-xl": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "80px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "36px",
+                                                        {
+                                                                "lineHeight": "44px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "body-sm": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        background-color: #FFFFFF;
+                        color: #1e293b;
+                }
+
+                .gradient-text {
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+
+                .ambient-shadow {
+                        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+                }
+
+                .hero-glow {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 600px;
+                        height: 600px;
+                        background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+                        z-index: -1;
+                        pointer-events: none;
+                }
+
+                @keyframes float {
+                        0% {
+                                transform: translateY(0);
+                        }
+
+                        50% {
+                                transform: translateY(-20px);
+                        }
+
+                        100% {
+                                transform: translateY(0);
+                        }
+                }
+
+                @keyframes scroll-vertical {
+                        0% {
+                                transform: translateY(0);
+                        }
+
+                        100% {
+                                transform: translateY(-50%);
+                        }
+                }
+        </style>
+
+</head>
+
+<body
+        class="font-body-md antialiased overflow-x-hidden selection:bg-vibrant-lime selection:text-dark-slate bg-off-white">
+        <!-- 1. HEADER (TopNavBar) -->
+        <header class="bg-transparent fixed top-0 z-50 w-full transition-all duration-300" id="main-header">
+                <div
+                        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-0 flex justify-between items-end">
+                        <a class="flex items-center gap-2 relative h-[100px] -ml-[40px] translate-x-[25px] md:translate-x-0" href="./index.html">
+                                <img id="header-logo-hero" alt="MatchWork Logo" class="object-contain transition-opacity duration-300 opacity-100 scale-125 origin-left"
+                                        src="./logo-hero.png"
+                                        style="height: 100px; width: auto;">
+                                <img id="header-logo-scrolled" alt="MatchWork Logo" class="object-contain absolute top-0 left-0 transition-opacity duration-300 opacity-0"
+                                        src="./logo-after-hero.jpg"
+                                        style="height: 100px; width: auto;">
+                        </a>
+                        <!-- Desktop Nav -->
+                        <nav
+                                class="hidden md:flex items-center gap-2 p-2 rounded-full bg-black/20 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] relative overflow-hidden transition-all duration-300">
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="./index.html#hero-section">
+                                        <span class="material-symbols-outlined text-[20px]">home</span>
+                                        <span>Inicio</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="./index.html#quienes-somos-section">
+                                        <span class="material-symbols-outlined text-[20px]">info</span>
+                                        <span>Quienes Somos</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="./index.html#solucion-section">
+                                        <span class="material-symbols-outlined text-[20px]">lightbulb</span>
+                                        <span>Solución</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="./index.html#team-section">
+                                        <span class="material-symbols-outlined text-[20px]">groups</span>
+                                        <span>Team</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="./index.html#preguntas-section">
+                                        <span class="material-symbols-outlined text-[20px]">help</span>
+                                        <span>Preguntas</span>
+                                </a>
+                        </nav>
+                        <div class="hidden md:flex items-center gap-6 mb-1.5">
+                                <a class="bg-vibrant-lime text-dark-slate px-6 py-2.5 rounded-full font-label-sm hover:opacity-90 transition-opacity shadow-lg shadow-vibrant-lime/30"
+                                        href="./index.html#contacto-section">Contáctanos</a>
+                                <div class="flex items-center gap-4">
+                                        <!-- Facebook -->
+                                        <a class="bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                                <img src="./icon-facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                                        </a>
+                                        <!-- Instagram -->
+                                        <a class="relative bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="https://www.instagram.com/matchwork.cl">
+                                                <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-off-white tracking-widest uppercase transition-colors duration-300 js-siguenos-text">SÍGUENOS</span>
+                                                <img src="./icon-instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+                                        </a>
+                                        <!-- TikTok -->
+                                        <a class="bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                                <img src="./icon-tiktok.png" alt="TikTok" class="w-5 h-5 object-contain">
+                                        </a>
+                                </div>
+                        </div>
+                        <!-- Mobile Menu Toggle -->
+                        <button id="open-menu-btn" class="md:hidden text-off-white p-2">
+                                <span class="material-symbols-outlined text-3xl">menu</span>
+                        </button>
+                </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-dark-slate flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                <button id="close-menu-btn" class="absolute top-6 right-6 text-off-white p-2 hover:text-vibrant-lime transition-colors">
+                        <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+                <nav class="flex flex-col items-center gap-8">
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="./index.html#hero-section">Inicio</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="./index.html#quienes-somos-section">Quienes Somos</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="./index.html#solucion-section">Solución</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="./index.html#team-section">Team</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="./index.html#preguntas-section">Preguntas</a>
+                        <a class="bg-vibrant-lime text-dark-slate px-8 py-3 rounded-full font-bold mt-4 shadow-lg shadow-vibrant-lime/30 hover:opacity-90 transition-opacity" href="./index.html#contacto-section">Contáctanos</a>
+                        <div class="flex items-center gap-6 mt-4">
+                                <!-- Facebook -->
+                                <a class="bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                        <img src="./icon-facebook.png" alt="Facebook" class="w-6 h-6 object-contain">
+                                </a>
+                                <!-- Instagram -->
+                                <a class="relative bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="https://www.instagram.com/matchwork.cl">
+                                        <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-off-white tracking-widest uppercase transition-colors duration-300 js-siguenos-text">SÍGUENOS</span>
+                                        <img src="./icon-instagram.png" alt="Instagram" class="w-6 h-6 object-contain">
+                                </a>
+                                <!-- TikTok -->
+                                <a class="bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                        <img src="./icon-tiktok.png" alt="TikTok" class="w-6 h-6 object-contain">
+                                </a>
+                        </div>
+                </nav>
+        </div>
+
+        <main>
+                <!-- Hero-like Header for Navigation to work -->
+                <section class="relative pt-32 pb-16 px-margin-mobile md:px-margin-desktop bg-dark-slate text-off-white" id="hero-section">
+                        <div class="max-w-4xl mx-auto text-center">
+                                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-vibrant-lime">Términos y Condiciones de Uso</h1>
+                        </div>
+                </section>
+
+                <!-- Terms Content -->
+                <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-off-white text-dark-slate">
+                        <div class="max-w-4xl mx-auto space-y-8 font-body-md">
+                                <div>
+                                        <p class="text-gray-600 leading-relaxed mb-4">Estos términos y condiciones regulan el uso y servicio de la aplicación móvil para iOS y Android Match Work y sitio web………… al crear una cuenta o utilizar el servicio aceptas términos y condiciones.</p>
+                                        <p class="text-gray-600 leading-relaxed mb-2 font-semibold">Propiedad de: MatchWork SpA (RUT: 78.428.877-3)</p>
+                                        <p class="text-gray-600 leading-relaxed mb-4"><strong>Match Work</strong> en esta modalidad de entrada opera exclusivamente como un mural digital gratuito de contacto comunitario. La plataforma <strong>no es un proveedor laboral, agencia de empleo ni intermediario transaccional</strong>. Los usuarios son plenamente responsables de verificar la identidad, idoneidad y seguridad de las contrapartes antes de acordar o ejecutar cualquier servicio.</p>
+                                </div>
+                                
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">1. Aceptación de los Términos y Consentimiento</h2>
+                                        <p class="text-gray-600 leading-relaxed">El acceso, descarga y uso de la aplicación móvil y la plataforma web de Match Work atribuyen la condición de Usuario, ya sea en el rol de "Cliente" o "Prestador". Al presionar la casilla de marcación obligatoria durante el registro ("Acepto los Términos y Condiciones y la Política de Privacidad"), el usuario manifiesta su consentimiento expreso, informado y sin reservas a las condiciones aquí establecidas. Si no está de acuerdo con estos términos, deberá abstenerse de registrarse y utilizar la plataforma.</p>
+                                </div>
+                                
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">2. Naturaleza del Servicio: Directorio Comunitario Gratuito</h2>
+                                        <p class="text-gray-600 leading-relaxed mb-2">Match Work proporciona una plataforma tecnológica de red social basada en la geolocalización, cuyo único propósito es permitir que los Clientes visualicen de forma gráfica los perfiles de los Prestadores independientes que ofrecen oficios en su vecindad y que se encuentran en "Modo Activo".</p>
+                                        <p class="text-gray-600 leading-relaxed mb-2">Prueba Gratuita: En esta fase de lanzamiento, el servicio es completamente gratuito y no exige el Rol Único Tributario (RUT) para el registro de cuentas básicas.</p>
+                                        <p class="text-gray-600 leading-relaxed">Evolución del Servicio: El Usuario reconoce y acepta que la plataforma desarrollará progresivamente modelos de Marketplace con intermediación tecnológica y transaccional activa, para hacer sustentable el propósito lo cual implica la futura extensión de los alcances de estas condiciones, previo aviso oportuno en la aplicación. No obstante en compromiso a su principio social comunitario considera mantener cuentas básicas de uso gratuito durante todo su desarrollo y crecimiento.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">3. Exclusión Estricta de Responsabilidad</h2>
+                                        <p class="text-gray-600 leading-relaxed mb-2">Debido a que Match Work no realiza verificaciones de identidad, antecedentes ni certificaciones técnicas de los perfiles registrados en esta fase gratuita, se establece explícitamente que:</p>
+                                        <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                                <li><strong>Soporte Visual:</strong> La plataforma actúa únicamente como un soporte visual y directorio de contacto comunitario.</li>
+                                                <li><strong>Inexistencia de Relación Laboral:</strong> No existe ningún tipo de vínculo laboral, subordinación, dependencia ni representación entre Match Work SpA y los Prestadores de servicios independientes.</li>
+                                                <li><strong>Ausencia de Garantías:</strong> Match Work no garantiza la idoneidad, calidad, licitud, veracidad de los antecedentes, ni la conducta de los oferentes o clientes. Cualquier daño, perjuicio, estafa o disconformidad derivada de la prestación del servicio es de exclusiva responsabilidad de las partes involucradas.</li>
+                                                <li><strong>Flujos Económicos Externos:</strong> Todos los acuerdos comerciales, presupuestos, negociaciones y flujos de pago se ejecutan de manera directa y exclusiva entre particulares, completamente al margen y fuera de la aplicación.</li>
+                                        </ul>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">4. Obligaciones y Comportamiento del Usuario</h2>
+                                        <p class="text-gray-600 leading-relaxed mb-2">Los usuarios se comprometen a utilizar la aplicación bajo los principios de la buena fe y el respeto comunitario. Queda estrictamente prohibido:</p>
+                                        <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                                <li>Suplantar la identidad de terceras personas o registrar datos falsos.</li>
+                                                <li>Publicar servicios ilícitos, contenido pornográfico, violento u ofensivo.</li>
+                                                <li>Utilizar los canales de mensajería interna (chat) para acosar, amenazar o realizar conductas abusivas.</li>
+                                        </ul>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">5. Mecanismo de Denuncia y Moderación</h2>
+                                        <p class="text-gray-600 leading-relaxed">Para mitigar riesgos y usos indebidos, Match Work pone a disposición de la comunidad una funcionalidad visible de "Reportar usuario o publicación" en cada perfil detallado. Tras la recepción de una alerta por comportamiento malicioso, fraudulento, ilícito o acoso, la administración se reserva el derecho de dar de baja los contenidos y suspender o eliminar el perfil infractor de forma inmediata y preventiva mediante moderación manual.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">6. Modificaciones del servicio</h2>
+                                        <p class="text-gray-600 leading-relaxed">Podemos cambiar, pausar o eliminar funcionalidades del Servicio en cualquier momento, con o sin aviso. Haremos esfuerzos razonables para notificar cambios materiales con anticipación. Si eliminamos el servicio completo, te avisaremos con al menos 30 días de anticipación.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">7. Terminación</h2>
+                                        <p class="text-gray-600 leading-relaxed">Puedes cerrar tu cuenta en cualquier momento desde la configuración de la app o escribiendo a soporte@matchwork.cl. Podemos suspender o cerrar tu cuenta sin aviso previo si incumples estos Términos, infringes la ley, o si tu uso del Servicio compromete su funcionamiento o el de otros usuarios.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">8. Cambios a estos Términos</h2>
+                                        <p class="text-gray-600 leading-relaxed">Si actualizamos estos Términos, cambiaremos la fecha al inicio del documento y te notificaremos dentro de la app. El uso continuado del Servicio luego del cambio implica aceptación de la versión nueva.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">9. Ley aplicable y jurisdicción</h2>
+                                        <p class="text-gray-600 leading-relaxed">Estos Términos se rigen por las leyes de la República de Chile. Cualquier controversia será resuelta por los tribunales ordinarios de justicia con asiento en la comuna de Santiago, Región Metropolitana, sin perjuicio de los derechos irrenunciables que la ley reconozca a los consumidores.</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">10. Contacto</h2>
+                                        <p class="text-gray-600 leading-relaxed">Para cualquier consulta sobre estos Términos escríbenos a soporte@matchwork.cl</p>
+                                </div>
+
+                                <div>
+                                        <h2 class="text-2xl font-bold mb-4 text-dark-slate">11. Propiedad Intelectual</h2>
+                                        <p class="text-gray-600 leading-relaxed">Todos los derechos de propiedad intelectual del software, código fuente, algoritmos (incluyendo el sistema de emparejamiento exclusivo bajo "Modo Activo"), interfaces gráficas, logotipos y marcas comerciales están reservados a nombre de Match Work SpA. Queda prohibida su reproducción, explotación o ingeniería inversa sin autorización expresa.</p>
+                                </div>
+                        </div>
+                </section>
+        </main>
+        <!-- 8. FOOTER -->
+        <!-- FOOTER -->
+        <footer class="flex flex-col md:flex-row gap-6 items-center justify-around w-full py-8 text-sm bg-dark-slate text-off-white border-t border-gray-800">
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                        <p>© <span id="currentYear">2026</span> <span class="font-bold">Match<span class="text-vibrant-lime">Work</span></span>. Todos los derechos reservados.</p>
+
+                </div>
+                <div class="flex items-center gap-4">
+                        <a href="./privacidad.html" target="_blank" class="hover:text-vibrant-lime transition-colors">Política de Privacidad</a>
+                        <div class="h-4 w-px bg-off-white/20"></div>
+                        <a href="./terminos.html" target="_blank" class="hover:text-vibrant-lime transition-colors">Términos y Condiciones de Uso</a>
+                </div>
+        </footer>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const header = document.getElementById('main-header');
+                        const hero = document.getElementById('hero-section');
+
+                        const navItems = document.querySelectorAll('#main-header nav a');
+                        const mobileToggle = document.querySelector('#main-header button.md\\:hidden');
+                        const headerLogoHero = document.getElementById('header-logo-hero');
+                        const headerLogoScrolled = document.getElementById('header-logo-scrolled');
+
+                        window.addEventListener('scroll', () => {
+                                if (hero && window.scrollY > hero.offsetHeight - 80) {
+                                        navItems.forEach(item => {
+                                                item.classList.remove('text-off-white');
+                                                item.classList.add('text-dark-slate');
+                                        });
+                                        if (mobileToggle) {
+                                                mobileToggle.classList.remove('text-off-white');
+                                                mobileToggle.classList.add('text-dark-slate');
+                                        }
+                                        if (headerLogoHero && headerLogoScrolled) {
+                                                headerLogoHero.classList.remove('opacity-100');
+                                                headerLogoHero.classList.add('opacity-0');
+                                                headerLogoScrolled.classList.remove('opacity-0');
+                                                headerLogoScrolled.classList.add('opacity-100');
+                                        }
+                                } else {
+                                        navItems.forEach(item => {
+                                                item.classList.add('text-off-white');
+                                                item.classList.remove('text-dark-slate');
+                                        });
+                                        if (mobileToggle) {
+                                                mobileToggle.classList.add('text-off-white');
+                                                mobileToggle.classList.remove('text-dark-slate');
+                                        }
+                                        if (headerLogoHero && headerLogoScrolled) {
+                                                headerLogoHero.classList.remove('opacity-0');
+                                                headerLogoHero.classList.add('opacity-100');
+                                                headerLogoScrolled.classList.remove('opacity-100');
+                                                headerLogoScrolled.classList.add('opacity-0');
+                                        }
+                                }
+                        });
+
+                        // Mobile Menu Logic
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const openMenuBtn = document.getElementById('open-menu-btn');
+                        const closeMenuBtn = document.getElementById('close-menu-btn');
+                        const mobileNavLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+                        if (openMenuBtn && closeMenuBtn && mobileMenu) {
+                                openMenuBtn.addEventListener('click', () => {
+                                        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                                        mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                                });
+
+                                closeMenuBtn.addEventListener('click', () => {
+                                        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                                        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                                });
+
+                                mobileNavLinks.forEach(link => {
+                                        link.addEventListener('click', () => {
+                                                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                                                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                                        });
+                                });
+                        }
+
+                        // Set current year
+                        const yearElement = document.getElementById('currentYear');
+                        if (yearElement) {
+                                yearElement.textContent = new Date().getFullYear();
+                        }
+                });
+        </script>
+
+
+
+
+        <!-- SCROLL TO TOP BUTTON -->
+        <a href="#hero-section" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-vibrant-lime text-dark-slate p-3 md:p-4 rounded-full shadow-lg shadow-vibrant-lime/40 hover:opacity-90 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl md:text-3xl font-bold">arrow_upward</span>
+        </a>
+
+</body>
+
+</html>

@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html class="light" lang="en" style="">
+
+<head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>MatchWork</title>
+        <link rel="icon" href="./favicon.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap"
+                rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-surface-variant": "#c4c9af",
+                                                "on-tertiary-fixed-variant": "#454268",
+                                                "on-tertiary-container": "#5b587f",
+                                                "tertiary-fixed-dim": "#c6c2ef",
+                                                "off-white": "#F5F3EE",
+                                                "on-secondary": "#30312e",
+                                                "error": "#ffb4ab",
+                                                "vibrant-lime": "#B8E62E",
+                                                "inverse-on-surface": "#2e3037",
+                                                "surface-container-highest": "#32353c",
+                                                "secondary-fixed": "#e4e2dd",
+                                                "primary-fixed-dim": "#a9d619",
+                                                "primary-fixed": "#c4f33c",
+                                                "outline-variant": "#444935",
+                                                "dark-slate": "#0E1117",
+                                                "tertiary": "#f5f0ff",
+                                                "secondary": "#c8c6c2",
+                                                "primary": "#deff86",
+                                                "on-tertiary-fixed": "#1a173a",
+                                                "on-background": "#e1e2eb",
+                                                "on-tertiary": "#2f2c50",
+                                                "primary-container": "#b8e62e",
+                                                "on-primary-container": "#4d6400",
+                                                "surface-tint": "#a9d619",
+                                                "on-secondary-fixed": "#1b1c19",
+                                                "surface-bright": "#363940",
+                                                "surface-dim": "#101319",
+                                                "surface-container-low": "#191c22",
+                                                "on-error-container": "#ffdad6",
+                                                "surface": "#101319",
+                                                "inverse-primary": "#4f6600",
+                                                "error-container": "#93000a",
+                                                "surface-variant": "#32353c",
+                                                "secondary-fixed-dim": "#c8c6c2",
+                                                "on-primary": "#273500",
+                                                "on-secondary-fixed-variant": "#474744",
+                                                "secondary-container": "#494946",
+                                                "on-primary-fixed": "#161f00",
+                                                "outline": "#8e937b",
+                                                "surface-container-lowest": "#0b0e14",
+                                                "on-surface": "#e1e2eb",
+                                                "background": "#101319",
+                                                "surface-container-high": "#272a31",
+                                                "inverse-surface": "#e1e2eb",
+                                                "surface-container": "#1d2026",
+                                                "on-secondary-container": "#b9b8b4",
+                                                "on-error": "#690005",
+                                                "tertiary-fixed": "#e4dfff",
+                                                "tertiary-container": "#d6d1ff",
+                                                "on-primary-fixed-variant": "#3b4d00"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "margin-mobile": "16px",
+                                                "gutter-desktop": "24px",
+                                                "margin-desktop": "80px",
+                                                "gutter-mobile": "16px",
+                                                "container-max": "1280px",
+                                                "section-md": "64px",
+                                                "base": "8px",
+                                                "section-lg": "100px"
+                                        },
+                                        "fontFamily": {
+                                                "body-md": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "Outfit"
+                                                ],
+                                                "body-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "label-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-sm": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-lg": [
+                                                        "Outfit"
+                                                ],
+                                                "label-sm": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-xl": [
+                                                        "Outfit"
+                                                ],
+                                                "headline-md": [
+                                                        "Outfit"
+                                                ],
+                                                "body-sm": [
+                                                        "Outfit"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "24px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "48px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "25px",
+                                                        {
+                                                                "lineHeight": "23px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-lg": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-sm": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-xl": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "80px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "36px",
+                                                        {
+                                                                "lineHeight": "44px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "body-sm": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        background-color: #FFFFFF;
+                        color: #1e293b;
+                }
+
+                .gradient-text {
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+
+                .ambient-shadow {
+                        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+                }
+
+                .hero-glow {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 600px;
+                        height: 600px;
+                        background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+                        z-index: -1;
+                        pointer-events: none;
+                }
+
+                @keyframes float {
+                        0% {
+                                transform: translateY(0);
+                        }
+
+                        50% {
+                                transform: translateY(-20px);
+                        }
+
+                        100% {
+                                transform: translateY(0);
+                        }
+                }
+
+                @keyframes scroll-vertical {
+                        0% {
+                                transform: translateY(0);
+                        }
+
+                        100% {
+                                transform: translateY(-50%);
+                        }
+                }
+        </style>
+
+</head>
+
+<body
+        class="font-body-md antialiased overflow-x-hidden selection:bg-vibrant-lime selection:text-dark-slate bg-off-white">
+        <!-- 1. HEADER (TopNavBar) -->
+        <header class="bg-transparent fixed top-0 z-50 w-full transition-all duration-300" id="main-header">
+                <div
+                        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-0 flex justify-between items-end">
+                        <a class="flex items-center gap-2 relative h-[100px] -ml-[40px] translate-x-[25px] md:translate-x-0" href="#">
+                                <img id="header-logo-hero" alt="MatchWork Logo" class="object-contain transition-opacity duration-300 opacity-100 scale-125 origin-left"
+                                        src="./logo-hero.png"
+                                        style="height: 100px; width: auto;">
+                                <img id="header-logo-scrolled" alt="MatchWork Logo" class="object-contain absolute top-0 left-0 transition-opacity duration-300 opacity-0"
+                                        src="./logo-after-hero.jpg"
+                                        style="height: 100px; width: auto;">
+                        </a>
+                        <!-- Desktop Nav -->
+                        <nav
+                                class="hidden md:flex items-center gap-2 p-2 rounded-full bg-black/20 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] relative overflow-hidden transition-all duration-300">
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="#hero-section">
+                                        <span class="material-symbols-outlined text-[20px]">home</span>
+                                        <span>Inicio</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="#quienes-somos-section">
+                                        <span class="material-symbols-outlined text-[20px]">info</span>
+                                        <span>Quienes Somos</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="#solucion-section">
+                                        <span class="material-symbols-outlined text-[20px]">lightbulb</span>
+                                        <span>Solución</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="#team-section">
+                                        <span class="material-symbols-outlined text-[20px]">groups</span>
+                                        <span>Team</span>
+                                </a>
+                                <a class="relative px-5 py-2 text-off-white text-sm font-medium transition-all duration-300 rounded-full hover:bg-vibrant-lime hover:text-dark-slate hover:shadow-lg hover:shadow-vibrant-lime/30 flex items-center gap-2 group"
+                                        href="#preguntas-section">
+                                        <span class="material-symbols-outlined text-[20px]">help</span>
+                                        <span>Preguntas</span>
+                                </a>
+                        </nav>
+                        <div class="hidden md:flex items-center gap-6 mb-1.5">
+                                <a class="bg-vibrant-lime text-dark-slate px-6 py-2.5 rounded-full font-label-sm hover:opacity-90 transition-opacity shadow-lg shadow-vibrant-lime/30"
+                                        href="#contacto-section">Contáctanos</a>
+                                <div class="flex items-center gap-4">
+                                        <!-- Facebook -->
+                                        <a class="bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                                <img src="./icon-facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                                        </a>
+                                        <!-- Instagram -->
+                                        <a class="relative bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="https://www.instagram.com/matchwork.cl">
+                                                <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-off-white tracking-widest uppercase transition-colors duration-300 js-siguenos-text">SÍGUENOS</span>
+                                                <img src="./icon-instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+                                        </a>
+                                        <!-- TikTok -->
+                                        <a class="bg-vibrant-lime text-dark-slate p-2 rounded-xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                                <img src="./icon-tiktok.png" alt="TikTok" class="w-5 h-5 object-contain">
+                                        </a>
+                                </div>
+                        </div>
+                        <!-- Mobile Menu Toggle -->
+                        <button id="open-menu-btn" class="md:hidden text-off-white p-2">
+                                <span class="material-symbols-outlined text-3xl">menu</span>
+                        </button>
+                </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-dark-slate flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                <button id="close-menu-btn" class="absolute top-6 right-6 text-off-white p-2 hover:text-vibrant-lime transition-colors">
+                        <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+                <nav class="flex flex-col items-center gap-8">
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="#hero-section">Inicio</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="#quienes-somos-section">Quienes Somos</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="#solucion-section">Solución</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="#team-section">Team</a>
+                        <a class="text-3xl text-off-white hover:text-vibrant-lime font-bold transition-colors" href="#preguntas-section">Preguntas</a>
+                        <a class="bg-vibrant-lime text-dark-slate px-8 py-3 rounded-full font-bold mt-4 shadow-lg shadow-vibrant-lime/30 hover:opacity-90 transition-opacity" href="#contacto-section">Contáctanos</a>
+                        <div class="flex items-center gap-6 mt-4">
+                                <!-- Facebook -->
+                                <a class="bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                        <img src="./icon-facebook.png" alt="Facebook" class="w-6 h-6 object-contain">
+                                </a>
+                                <!-- Instagram -->
+                                <a class="relative bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="https://www.instagram.com/matchwork.cl">
+                                        <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-off-white tracking-widest uppercase transition-colors duration-300 js-siguenos-text">SÍGUENOS</span>
+                                        <img src="./icon-instagram.png" alt="Instagram" class="w-6 h-6 object-contain">
+                                </a>
+                                <!-- TikTok -->
+                                <a class="bg-vibrant-lime text-dark-slate p-2.5 rounded-2xl hover:opacity-80 transition-opacity duration-200" target="_blank" href="#">
+                                        <img src="./icon-tiktok.png" alt="TikTok" class="w-6 h-6 object-contain">
+                                </a>
+                        </div>
+                </nav>
+        </div>
+
+        <main>
+                <!-- 2. HERO -->
+                <section class="relative pt-32 pb-48 overflow-hidden px-margin-mobile md:px-margin-desktop bg-dark-slate"
+                        id="hero-section">
+                        <!-- Green Glow Effect -->
+                        <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-vibrant-lime/20 rounded-full blur-[120px] -translate-y-1/4 translate-x-1/4 pointer-events-none"></div>
+                        
+                        <!-- SVG Shape Divider for High Def Curve -->
+                        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-full h-[120px] md:h-[220px] block" fill="#F5F3EE">
+                                <path d="M0,160L48,154.7C96,149,192,139,288,149.3C384,160,480,192,576,202.7C672,213,768,203,864,181.3C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                                <div class="flex flex-col gap-8 lg:mt-8">
+                                        <h1 class="text-5xl md:text-7xl text-off-white leading-tight font-bold"><span class="text-vibrant-lime">Soluciones</span> cerca.&nbsp;<br>Problemas lejos.</h1>
+                                        <p class="text-lg md:text-xl text-off-white/80 leading-relaxed max-w-2xl">¿Necesitas una mano? ¿Tienes algo que ofrecer? MatchWork te conecta con personas cerca de ti que pueden ayudarte o necesitan lo que puedes ofrecer</p>
+                                        <div class="flex flex-wrap items-center gap-4 pt-4">
+                                                <a class="bg-vibrant-lime text-dark-slate px-8 py-3.5 rounded-full font-bold hover:opacity-90 transition-opacity shadow-lg shadow-vibrant-lime/30 flex items-center justify-center text-lg"
+                                                        href="#">
+                                                        Acceder a la Aplicación
+                                                </a>
+                                                <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3.5 rounded-full text-off-white/70 cursor-default">
+                                                        <div class="flex items-center gap-2">
+                                                                <!-- Apple Icon -->
+                                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 384 512">
+                                                                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                                                                </svg>
+                                                                <!-- Google Play (Android) Icon -->
+                                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 512 512">
+                                                                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                                                                </svg>
+                                                        </div>
+                                                        <div class="flex flex-col items-start leading-[1.2]">
+                                                                <span class="text-[10px] uppercase tracking-wider font-bold text-vibrant-lime">Próximamente</span>
+                                                                <span class="font-medium text-sm text-off-white">Aplicación para Smartphone</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="relative z-10 flex justify-center lg:justify-end mt-12 lg:mt-0">
+                                        <img alt="App Interface Mockup"
+                                                class="max-w-full h-auto drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9lwIupCCQF18r5e_NsFmeWHZAdjhvHnIwoAIjeD071AYt_IiBjiOFhCd075klEW0xkgJ9ORBW16bX1wT2idKiJVsETOPXeLZ71AKL22i8650Z3E4lFQyBBFZ4KX8oOrZgeGNwv6pZ7fXuzLiIDvi3kWAoMT3BsP5ItqmdklF19O93dl2wu0RSxA5wSqac6Fv0xK8QpyecyWqysXmNprQtF8sl-Mmmdl4rmvvXtQq-1wiKwwMMr9VLJu_2e3y8PNf2zA"
+                                                style="max-height: 700px;">
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 2.5. QUIENES SOMOS -->
+                <section id="quienes-somos-section" class="bg-off-white py-16 md:py-24">
+                        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                                <div>
+                                        <h2 class="text-3xl md:text-5xl font-bold text-dark-slate mb-6">Quiénes Somos</h2>
+                                        <div class="text-lg md:text-xl text-gray-600 leading-relaxed space-y-4">
+                                                <p>Creamos MatchWork para hacer más fácil algo que hacemos todos los días: encontrar soluciones cerca, efectivas y rápidas para resolver lo que necesitamos.</p>
+                                                <p>Queremos conectar oportunidades, servicios y personas de manera rápida, simple y cercana.</p>
+                                        </div>
+                                </div>
+                                <div>
+                                        <img src="./quienes_somos_team.png" alt="Quienes Somos - Equipo" class="w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover object-bottom rounded-3xl drop-shadow-2xl">
+                                </div>
+                        </div>
+                </section>
+
+                <section id="solucion-section" class="bg-off-white px-4 py-8 antialiased dark:bg-gray-900 md:py-16">
+                        <div
+                                class="mx-auto grid max-w-screen-xl rounded-lg bg-off-white p-4 dark:bg-gray-800 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16">
+                                <div class="lg:col-span-5 lg:mt-0 flex items-center justify-center">
+                                        <img class="mb-4 w-full h-auto max-w-lg object-contain drop-shadow-xl"
+                                                src="./hero-team.png" alt="Equipo de Profesionales" />
+                                </div>
+                                <div class="me-auto place-self-center lg:col-span-7">
+                                        <h4 class="mb-2 text-vibrant-lime bg-dark-slate rounded-full px-3 py-1 inline-block font-bold uppercase tracking-wide text-sm">una
+                                                antigua problematica</h4>
+                                        <h1
+                                                class="mb-3 text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-4xl">
+                                                Mucho talento suelto, demasiada búsqueda a ciegas.
+                                        </h1>
+                                        <p class="mb-6 text-lg md:text-xl text-gray-600 leading-relaxed">Encontrar a la persona indicada para resolver una urgencia o un trabajo cotidiano suele ser lento y desgastante, mientras muchos trabajadores cerca tuyo esperan una oportunidad para solucionar tus problemas.</p>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- NEW FEATURE COMPONENT -->
+                <section id="equipo-section" class="w-full py-16 md:py-24 bg-off-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div
+                                        class="grid border border-gray-200 rounded-3xl bg-white p-8 grid-cols-1 gap-8 items-center lg:grid-cols-2">
+                                        <div class="flex gap-10 flex-col">
+                                                <div class="flex gap-4 flex-col">
+                                                        <div>
+                                                                <span
+                                                                        class="inline-flex items-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1 text-xs font-semibold bg-vibrant-lime/10">Plataforma</span>
+                                                        </div>
+                                                        <div class="flex gap-2 flex-col">
+                                                                <h2
+                                                                        class="text-3xl lg:text-5xl tracking-tighter max-w-xl text-left font-bold text-dark-slate">
+                                                                        Presentamos MatchWork
+                                                                </h2>
+                                                                <p
+                                                                        class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl text-left">
+                                                                        MatchWork es una app que permite conectar a clientes y workers de forma rápida y por cercanía, facilitando encontrar u ofrecer servicios en solo tres simples pasos.
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                                <div class="lg:pl-6 w-full flex flex-col">
+                                                        <!-- Item 1 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary class="flex flex-1 items-center justify-between py-4 font-semibold text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Necesitas un servicio?
+                                                                        <span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div class="pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
+                                                                        <ul class="flex flex-col gap-4 mt-2 mb-2">
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">1</span>
+                                                                                        <span class="font-medium text-[15px]">Busca el servicio que necesites</span>
+                                                                                </li>
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">2</span>
+                                                                                        <span class="font-medium text-[15px]">Encuentra personas disponibles cerca</span>
+                                                                                </li>
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">3</span>
+                                                                                        <span class="font-medium text-[15px]">Contacta y listo</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                </div>
+                                                        </details>
+
+                                                        <!-- Item 2 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary class="flex flex-1 items-center justify-between py-4 font-semibold text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Ofreces un servicio?
+                                                                        <span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div class="pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
+                                                                        <ul class="flex flex-col gap-4 mt-2 mb-2">
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">1</span>
+                                                                                        <span class="font-medium text-[15px]">Crea tu perfil</span>
+                                                                                </li>
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">2</span>
+                                                                                        <span class="font-medium text-[15px]">Indica qué haces y dónde estás disponible</span>
+                                                                                </li>
+                                                                                <li class="flex items-center gap-4">
+                                                                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-dark-slate text-vibrant-lime font-bold text-xs">3</span>
+                                                                                        <span class="font-medium text-[15px]">Conecta con personas que necesitan tu servicio</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                </div>
+                                                        </details>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="rounded-2xl aspect-square flex items-center justify-center border border-gray-200 overflow-hidden">
+                                                <img src="./solucion_image.jpg" alt="MatchWork App AR Concept"
+                                                        class="w-full h-full object-cover">
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+
+
+                <!-- #TeamMatchWork SECTION -->
+                <section id="team-section"
+                        class="py-16 sm:py-24 bg-off-white text-dark-slate border-t border-b border-gray-200"
+                        role="region" aria-label="TeamMatchWork Profiles">
+                        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+                                                #TeamMatchWork
+                                        </h2>
+                                        <p class="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                Conoce a las personas detrás de la visión y estrategia de MatchWork.
+                                        </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4 items-stretch" role="list">
+                                        <!-- Cristian -->
+                                        <div class="group rounded-xl border border-gray-100 bg-white text-dark-slate shadow-sm flex flex-col items-center justify-between h-full p-4 lg:p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-vibrant-lime/50 text-center"
+                                                role="listitem">
+                                                <div class="flex flex-col items-center w-full">
+                                                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-vibrant-lime/30 mb-4 overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:border-vibrant-lime group-hover:shadow-[0_0_25px_rgba(184,230,46,0.75)] bg-vibrant-lime/10 group-hover:bg-vibrant-lime">
+                                                                <img src="./team-cristian.png" alt="Cristian Morales Cocio" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                                                        </div>
+                                                        <h3 class="text-base lg:text-lg leading-tight font-bold text-gray-900 tracking-tight text-center">Cristian<br/>Morales Cocio</h3>
+                                                        <p class="inline-flex items-center justify-center text-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1.5 text-[11px] lg:text-xs font-semibold bg-vibrant-lime/10 uppercase mt-2.5 tracking-tight">
+                                                                Gerente Comercial
+                                                        </p>
+                                                </div>
+                                                <div class="mt-4 flex gap-3 justify-center text-gray-400">
+                                                        <a href="#"
+                                                                class="hover:text-vibrant-lime transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                                        </a>
+                                                </div>
+                                        </div>
+
+                                        <!-- Claudio Carvallo -->
+                                        <div class="group rounded-xl border border-gray-100 bg-white text-dark-slate shadow-sm flex flex-col items-center justify-between h-full p-4 lg:p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-vibrant-lime/50 text-center"
+                                                role="listitem">
+                                                <div class="flex flex-col items-center w-full">
+                                                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-vibrant-lime/30 mb-4 overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:border-vibrant-lime group-hover:shadow-[0_0_25px_rgba(184,230,46,0.75)] bg-vibrant-lime/10 group-hover:bg-vibrant-lime">
+                                                                <img src="./team-claudio.png" alt="Claudio Carvallo Delgado" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                                                        </div>
+                                                        <h3 class="text-base lg:text-lg leading-tight font-bold text-gray-900 tracking-tight text-center">Claudio<br/>Carvallo Delgado</h3>
+                                                        <p class="inline-flex items-center justify-center text-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1.5 text-[11px] lg:text-xs font-semibold bg-vibrant-lime/10 uppercase mt-2.5 tracking-tight">
+                                                                Gerente de Operaciones
+                                                        </p>
+                                                </div>
+                                                <div class="mt-4 flex gap-3 justify-center text-gray-400">
+                                                        <a href="#"
+                                                                class="hover:text-vibrant-lime transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                                        </a>
+                                                </div>
+                                        </div>
+
+                                        <!-- Fernando Guzmán Guzmán -->
+                                        <div class="group rounded-xl border border-gray-100 bg-white text-dark-slate shadow-sm flex flex-col items-center justify-between h-full p-4 lg:p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-vibrant-lime/50 text-center"
+                                                role="listitem">
+                                                <div class="flex flex-col items-center w-full">
+                                                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-vibrant-lime/30 mb-4 overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:border-vibrant-lime group-hover:shadow-[0_0_25px_rgba(184,230,46,0.75)] bg-vibrant-lime/10 group-hover:bg-vibrant-lime">
+                                                                <img src="./team-fernando.png" alt="Fernando Guzmán Guzmán" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                                                        </div>
+                                                        <h3 class="text-base lg:text-lg leading-tight font-bold text-gray-900 tracking-tight text-center">Fernando<br/>Guzmán Guzmán</h3>
+                                                        <p class="inline-flex items-center justify-center text-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1.5 text-[11px] lg:text-xs font-semibold bg-vibrant-lime/10 uppercase mt-2.5 tracking-tight">
+                                                                Gerente de TI
+                                                        </p>
+                                                </div>
+                                                <div class="mt-4 flex gap-3 justify-center text-gray-400">
+                                                        <a href="#"
+                                                                class="hover:text-vibrant-lime transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                                        </a>
+                                                </div>
+                                        </div>
+
+                                        <!-- Fabiola -->
+                                        <div class="group rounded-xl border border-gray-100 bg-white text-dark-slate shadow-sm flex flex-col items-center justify-between h-full p-4 lg:p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-vibrant-lime/50 text-center"
+                                                role="listitem">
+                                                <div class="flex flex-col items-center w-full">
+                                                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-vibrant-lime/30 mb-4 overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:border-vibrant-lime group-hover:shadow-[0_0_25px_rgba(184,230,46,0.75)] bg-vibrant-lime/10 group-hover:bg-vibrant-lime">
+                                                                <img src="./team-fabiola.png" alt="Fabiola Sanhueza Sepúlveda" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                                                        </div>
+                                                        <h3 class="text-base lg:text-lg leading-tight font-bold text-gray-900 tracking-tight text-center">Fabiola<br/>Sanhueza Sepúlveda</h3>
+                                                        <p class="inline-flex items-center justify-center text-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1.5 text-[11px] lg:text-xs font-semibold bg-vibrant-lime/10 uppercase mt-2.5 tracking-tight">
+                                                                Gerente de Marketing
+                                                        </p>
+                                                </div>
+                                                <div class="mt-4 flex gap-3 justify-center text-gray-400">
+                                                        <a href="#"
+                                                                class="hover:text-vibrant-lime transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                                        </a>
+                                                </div>
+                                        </div>
+
+                                        <!-- Eileen -->
+                                        <div class="group rounded-xl border border-gray-100 bg-white text-dark-slate shadow-sm flex flex-col items-center justify-between h-full p-4 lg:p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-vibrant-lime/50 text-center"
+                                                role="listitem">
+                                                <div class="flex flex-col items-center w-full">
+                                                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-vibrant-lime/30 mb-4 overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:border-vibrant-lime group-hover:shadow-[0_0_25px_rgba(184,230,46,0.75)] bg-vibrant-lime/10 group-hover:bg-vibrant-lime">
+                                                                <img src="./team-eileen.png" alt="Eileen Godoy Yáñez" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                                                        </div>
+                                                        <h3 class="text-base lg:text-lg leading-tight font-bold text-gray-900 tracking-tight text-center">Eileen<br/>Godoy Yáñez</h3>
+                                                        <p class="inline-flex items-center justify-center text-center rounded-full border border-vibrant-lime text-dark-slate px-3 py-1.5 text-[11px] lg:text-xs font-semibold bg-vibrant-lime/10 uppercase mt-2.5 tracking-tight">
+                                                                Gerencia de Comunicaciones
+                                                        </p>
+                                                </div>
+                                                <div class="mt-4 flex gap-3 justify-center text-gray-400">
+                                                        <a href="#"
+                                                                class="hover:text-vibrant-lime transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                                        </a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- NEW FAQS SECTION -->
+                <section id="preguntas-section" class="py-16 md:py-24 bg-off-white border-t border-gray-200">
+                        <div class="mx-auto max-w-5xl px-6">
+                                <div class="grid gap-8 md:grid-cols-5 md:gap-12">
+                                        <div class="md:col-span-2">
+                                                <h2 class="text-dark-slate text-4xl font-semibold">Preguntas Frecuentes
+                                                </h2>
+
+                                                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mt-6 hidden md:block">
+                                                        ¿No encuentras lo que buscas? Contacta a nuestro
+                                                        <a href="#contacto-section"
+                                                                class="text-vibrant-lime bg-dark-slate rounded-full px-3 py-1 inline-block font-medium hover:underline">
+                                                                equipo de soporte
+                                                        </a>
+                                                        para obtener ayuda.
+                                                </p>
+                                        </div>
+
+                                        <div class="md:col-span-3">
+                                                <div class="w-full">
+                                                        <!-- Item 1 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary
+                                                                        class="flex flex-1 items-center justify-between py-4 font-medium text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Qué es Match Work y cómo funciona?
+                                                                        <span
+                                                                                class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div
+                                                                        class="pb-4 pt-0 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                                        Es una plataforma comunitaria basada en geolocalización donde conecta a personas que necesitan un servicio con trabajadores(workers) independientes que se encuentran dentro de un radio determinado.
+                                                                </div>
+                                                        </details>
+
+                                                        <!-- Item 2 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary
+                                                                        class="flex flex-1 items-center justify-between py-4 font-medium text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Tiene algún costo usar la aplicación o registrarse?
+                                                                        <span
+                                                                                class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div
+                                                                        class="pb-4 pt-0 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                                        No, tanto el registro como el uso de la cuenta es 100% gratuito
+                                                                </div>
+                                                        </details>
+
+                                                        <!-- Item 3 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary
+                                                                        class="flex flex-1 items-center justify-between py-4 font-medium text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Match Work cobra comisiones o gestiona los pagos?
+                                                                        <span
+                                                                                class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div
+                                                                        class="pb-4 pt-0 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                                        No. La app funciona únicamente como un punto de contacto comunitario. Todos los presupuestos, acuerdos y pagos se realizan de forma externa y directa entre el cliente y el prestador.
+                                                                </div>
+                                                        </details>
+
+                                                        <!-- Item 4 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary
+                                                                        class="flex flex-1 items-center justify-between py-4 font-medium text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Es visible mi dirección exacta en el mapa?
+                                                                        <span
+                                                                                class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div
+                                                                        class="pb-4 pt-0 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                                        No, por seguridad nunca se muestra tu dirección exacta, sino solo un radio aproximado de distancia. Además, solo eres visible cuando mantienes la app abierta en "Modo Activo"; al cerrarla o cambiar a Fuera de Servicio, tu perfil se oculta automáticamente.
+                                                                </div>
+                                                        </details>
+
+                                                        <!-- Item 5 -->
+                                                        <details class="group border-b border-gray-200">
+                                                                <summary
+                                                                        class="flex flex-1 items-center justify-between py-4 font-medium text-dark-slate cursor-pointer hover:underline list-none [&::-webkit-details-marker]:hidden">
+                                                                        ¿Qué hago si tengo un problema con otro usuario?
+                                                                        <span
+                                                                                class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                                                                </summary>
+                                                                <div
+                                                                        class="pb-4 pt-0 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                                        Puedes usar el botón "Reportar usuario o publicación" disponible en su perfil para que el equipo revise la situación y tome medidas como suspender o eliminar la cuenta infractora. También cuentas con el sistema de calificaciones y reseñas para evaluar la experiencia.
+                                                                </div>
+                                                        </details>
+                                                </div>
+                                        </div>
+
+                                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mt-6 md:hidden">
+                                                ¿No encuentras lo que buscas? Contacta a nuestro
+                                                <a href="#contacto-section" class="text-vibrant-lime bg-dark-slate rounded-full px-3 py-1 inline-block font-medium hover:underline">
+                                                        equipo de soporte
+                                                </a>
+                                        </p>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- CTA SECTION -->
+                <div class="w-full py-20 lg:py-40 bg-off-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div
+                                        class="flex flex-col text-center rounded-3xl p-8 lg:p-14 gap-8 items-center bg-[#0E1117]">
+                                        <div>
+                                                <span
+                                                        class="inline-flex items-center rounded-full border border-transparent bg-[#B8E62E] px-3 py-1 text-xs font-semibold text-[#0E1117]">
+                                                        PROXIMAMENTE DISPONIBLE PARA ANDROID E IOs
+                                                </span>
+                                        </div>
+                                        <div class="flex flex-col gap-4">
+                                                <h3
+                                                        class="text-3xl md:text-5xl tracking-tighter max-w-4xl font-bold text-[#FFF5EB] whitespace-nowrap">
+                                                        ¿Ya la usaste?, Es 100% gratis.
+                                                </h3>
+                                                <p
+                                                        class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto">
+                                                        Encuentra u ofrece oficios en tu barrio de forma rápida, directa y 100% gratis. ¡Únete a la comunidad y haz tu primer match hoy!
+                                                </p>
+                                        </div>
+                                        <div class="flex flex-row gap-4">
+                                                <a href="#hero-section"
+                                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-[#B8E62E] text-[#0E1117] hover:bg-[#B8E62E]/90 h-11 px-8 gap-2">
+                                                        Accede a la Aplicación <span
+                                                                class="material-symbols-outlined text-lg">arrow_forward</span>
+                                                </a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+                <!-- CONTACT FORM SECTION -->
+                <section id="contacto-section"
+                        class="w-full py-16 md:py-24 bg-white text-dark-slate border-t border-gray-200">
+                        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="text-center mb-12">
+                                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+                                                Ponte en contacto
+                                        </h2>
+                                        <p class="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed">
+                                                ¿Tienes alguna duda o quieres saber más sobre MatchWork? Escríbenos y te
+                                                responderemos pronto.
+                                        </p>
+                                </div>
+
+                                <div class="bg-off-white rounded-3xl border border-gray-200 p-8 md:p-12 shadow-sm">
+                                        <form action="https://formsubmit.co/ajax/contactanos@matchworks.cl" method="POST" class="space-y-6" id="contact-form">
+                                                <input type="hidden" name="_subject" value="Nueva solicitud de Soporte">
+                                                <input type="hidden" name="_cc" value="contactanos@matchwork.cl">
+                                                <div id="form-message" class="hidden rounded-xl p-4 text-sm font-medium"></div>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div class="flex flex-col gap-2">
+                                                                <label for="name"
+                                                                        class="text-sm font-semibold text-gray-700">Nombre
+                                                                        completo</label>
+                                                                <input type="text" name="name" id="name"
+                                                                        placeholder="Ej. Juan Pérez"
+                                                                        class="w-full bg-white border border-gray-300 rounded-xl py-3 px-4 text-dark-slate focus:border-vibrant-lime focus:ring-2 focus:ring-vibrant-lime/20 outline-none transition-all"
+                                                                        required maxlength="80" pattern="^[a-zA-ZÀ-ÿ\s]+$" title="Solo se permiten letras y espacios.">
+                                                                <p id="name-error" class="text-error text-xs font-semibold hidden">Solo se permiten letras y espacios.</p>
+                                                        </div>
+                                                        <div class="flex flex-col gap-2">
+                                                                <label for="email"
+                                                                        class="text-sm font-semibold text-gray-700">Correo
+                                                                        electrónico</label>
+                                                                <input type="email" name="email" id="email"
+                                                                        placeholder="ejemplo@correo.com"
+                                                                        class="w-full bg-white border border-gray-300 rounded-xl py-3 px-4 text-dark-slate focus:border-vibrant-lime focus:ring-2 focus:ring-vibrant-lime/20 outline-none transition-all"
+                                                                        required maxlength="150" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un correo válido (ej. usuario@dominio.com).">
+                                                                <p id="email-error" class="text-error text-xs font-semibold hidden">Falta el @ o el dominio del correo.</p>
+                                                        </div>
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                        <label for="message"
+                                                                class="text-sm font-semibold text-gray-700">Mensaje</label>
+                                                        <textarea id="message" name="message" rows="4"
+                                                                placeholder="¿En qué podemos ayudarte?"
+                                                                class="w-full bg-white border border-gray-300 rounded-xl py-3 px-4 text-dark-slate focus:border-vibrant-lime focus:ring-2 focus:ring-vibrant-lime/20 outline-none transition-all resize-y"
+                                                                required maxlength="1000"></textarea>
+                                                        <p id="message-error" class="text-error text-xs font-semibold hidden">El mensaje no es válido.</p>
+                                                </div>
+
+                                                <!-- Anti-spam Verification -->
+                                                <div class="flex flex-col gap-2">
+                                                        <label for="security" id="security-label"
+                                                                class="text-sm font-semibold text-gray-700">Verificación
+                                                                de seguridad</label>
+                                                        <input type="text" name="security" id="security"
+                                                                placeholder="Tu respuesta"
+                                                                class="w-full md:w-1/2 bg-white border border-gray-300 rounded-xl py-3 px-4 text-dark-slate focus:border-vibrant-lime focus:ring-2 focus:ring-vibrant-lime/20 outline-none transition-all"
+                                                                required>
+                                                        <p id="security-error" class="text-error text-xs font-semibold hidden">Suma incorrecta.</p>
+                                                </div>
+
+                                                <div class="pt-2">
+                                                        <button type="submit" id="submit-btn" disabled
+                                                                class="w-full md:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-[#B8E62E] text-[#0E1117] hover:bg-[#B8E62E]/90 h-12 px-8 gap-2">
+                                                                Enviar mensaje
+                                                                <span
+                                                                        class="material-symbols-outlined text-lg">send</span>
+                                                        </button>
+                                                </div>
+                                        </form>
+                                </div>
+                        </div>
+                </section>
+
+        </main>
+        <!-- 8. FOOTER -->
+        <!-- FOOTER -->
+        <footer class="flex flex-col md:flex-row gap-6 items-center justify-around w-full py-8 text-sm bg-dark-slate text-off-white border-t border-gray-800">
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                        <p>© <span id="currentYear">2026</span> <span class="font-bold">Match<span class="text-vibrant-lime">Work</span></span>. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                        <a href="./privacidad.html" target="_blank" class="hover:text-vibrant-lime transition-colors">Política de Privacidad</a>
+                        <div class="h-4 w-px bg-off-white/20"></div>
+                        <a href="./terminos.html" target="_blank" class="hover:text-vibrant-lime transition-colors">Términos y Condiciones de Uso</a>
+                </div>
+        </footer>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const header = document.getElementById('main-header');
+                        const hero = document.getElementById('hero-section');
+
+                        const navItems = document.querySelectorAll('#main-header nav a');
+                        const mobileToggle = document.querySelector('#main-header button.md\\:hidden');
+                        const headerLogoHero = document.getElementById('header-logo-hero');
+                        const headerLogoScrolled = document.getElementById('header-logo-scrolled');
+                        const siguenosTexts = document.querySelectorAll('.js-siguenos-text');
+
+                        window.addEventListener('scroll', () => {
+                                if (hero && window.scrollY > hero.offsetHeight - 80) {
+                                        navItems.forEach(item => {
+                                                item.classList.remove('text-off-white', 'hover:bg-white/10', 'hover:text-vibrant-lime', 'hover:shadow-[inset_0_0_20px_rgba(184,230,46,0.15)]');
+                                                item.classList.add('text-dark-slate', 'hover:bg-vibrant-lime', 'hover:text-dark-slate', 'hover:shadow-lg', 'hover:shadow-vibrant-lime/30');
+                                        });
+                                        siguenosTexts.forEach(item => {
+                                                item.classList.remove('text-off-white');
+                                                item.classList.add('text-dark-slate');
+                                        });
+                                        if (mobileToggle) {
+                                                mobileToggle.classList.remove('text-off-white');
+                                                mobileToggle.classList.add('text-dark-slate');
+                                        }
+                                        if (headerLogoHero && headerLogoScrolled) {
+                                                headerLogoHero.classList.remove('opacity-100');
+                                                headerLogoHero.classList.add('opacity-0');
+                                                headerLogoScrolled.classList.remove('opacity-0');
+                                                headerLogoScrolled.classList.add('opacity-100');
+                                        }
+                                } else {
+                                        navItems.forEach(item => {
+                                                item.classList.add('text-off-white', 'hover:bg-white/10', 'hover:text-vibrant-lime', 'hover:shadow-[inset_0_0_20px_rgba(184,230,46,0.15)]');
+                                                item.classList.remove('text-dark-slate', 'hover:bg-vibrant-lime', 'hover:text-dark-slate', 'hover:shadow-lg', 'hover:shadow-vibrant-lime/30');
+                                        });
+                                        siguenosTexts.forEach(item => {
+                                                item.classList.add('text-off-white');
+                                                item.classList.remove('text-dark-slate');
+                                        });
+                                        if (mobileToggle) {
+                                                mobileToggle.classList.add('text-off-white');
+                                                mobileToggle.classList.remove('text-dark-slate');
+                                        }
+                                        if (headerLogoHero && headerLogoScrolled) {
+                                                headerLogoHero.classList.remove('opacity-0');
+                                                headerLogoHero.classList.add('opacity-100');
+                                                headerLogoScrolled.classList.remove('opacity-100');
+                                                headerLogoScrolled.classList.add('opacity-0');
+                                        }
+                                }
+                        });
+
+                        // Mobile Menu Logic
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const openMenuBtn = document.getElementById('open-menu-btn');
+                        const closeMenuBtn = document.getElementById('close-menu-btn');
+                        const mobileNavLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+                        if (openMenuBtn && closeMenuBtn && mobileMenu) {
+                                openMenuBtn.addEventListener('click', () => {
+                                        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                                        mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                                });
+
+                                closeMenuBtn.addEventListener('click', () => {
+                                        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                                        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                                });
+
+                                mobileNavLinks.forEach(link => {
+                                        link.addEventListener('click', () => {
+                                                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                                                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                                        });
+                                });
+                        }
+
+                        // Set current year
+                        const yearElement = document.getElementById('currentYear');
+                        if (yearElement) {
+                                yearElement.textContent = new Date().getFullYear();
+                        }
+
+                        // Form handling
+                        const form = document.getElementById('contact-form');
+                        const messageDiv = document.getElementById('form-message');
+
+                        if (form) {
+                                const nameInput = document.getElementById('name');
+                                const emailInput = document.getElementById('email');
+                                const messageInput = document.getElementById('message');
+                                const securityInput = document.getElementById('security');
+                                const submitBtn = document.getElementById('submit-btn');
+                                const securityLabel = document.getElementById('security-label');
+
+                                let expectedSum = 0;
+
+                                function generateMath() {
+                                        let num1 = Math.floor(Math.random() * 9) + 1;
+                                        let num2 = Math.floor(Math.random() * 9) + 1;
+                                        expectedSum = num1 + num2;
+                                        if (securityLabel) {
+                                                securityLabel.textContent = `Verificación de seguridad: ¿Cuánto es ${num1} + ${num2}?`;
+                                        }
+                                        securityInput.value = '';
+                                        validateForm();
+                                }
+
+                                const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
+                                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                                function validateForm() {
+                                        let isValid = true;
+
+                                        // Name
+                                        if (nameInput.value.length > 0 && !nameRegex.test(nameInput.value)) {
+                                                document.getElementById('name-error').classList.remove('hidden');
+                                                isValid = false;
+                                        } else {
+                                                document.getElementById('name-error').classList.add('hidden');
+                                                if (nameInput.value.trim() === '') isValid = false;
+                                        }
+
+                                        // Email
+                                        if (emailInput.value.length > 0 && (!emailInput.value.includes('@') || !emailRegex.test(emailInput.value))) {
+                                                document.getElementById('email-error').classList.remove('hidden');
+                                                isValid = false;
+                                        } else {
+                                                document.getElementById('email-error').classList.add('hidden');
+                                                if (emailInput.value.trim() === '') isValid = false;
+                                        }
+
+                                        // Message
+                                        const dangerousMessageChars = /[<>/{}\[\]=;'\"\\]/;
+                                        if (messageInput.value.length > 0 && dangerousMessageChars.test(messageInput.value)) {
+                                                document.getElementById('message-error').textContent = "El mensaje contiene caracteres no permitidos (ej. < > / { }).";
+                                                document.getElementById('message-error').classList.remove('hidden');
+                                                isValid = false;
+                                        } else if (messageInput.value.length > 0 && messageInput.value.trim() === '') {
+                                                document.getElementById('message-error').textContent = "El mensaje no puede estar vacío.";
+                                                document.getElementById('message-error').classList.remove('hidden');
+                                                isValid = false;
+                                        } else {
+                                                document.getElementById('message-error').classList.add('hidden');
+                                                if (messageInput.value.trim() === '') isValid = false;
+                                        }
+
+                                        // Security
+                                        if (securityInput.value.length > 0 && parseInt(securityInput.value) !== expectedSum) {
+                                                document.getElementById('security-error').classList.remove('hidden');
+                                                isValid = false;
+                                        } else {
+                                                document.getElementById('security-error').classList.add('hidden');
+                                                if (securityInput.value.trim() === '' || parseInt(securityInput.value) !== expectedSum) isValid = false;
+                                        }
+
+                                        submitBtn.disabled = !isValid;
+                                }
+
+                                [nameInput, emailInput, messageInput, securityInput].forEach(input => {
+                                        input.addEventListener('input', validateForm);
+                                });
+
+                                generateMath();
+
+                                form.addEventListener('submit', function(e) {
+                                        e.preventDefault();
+
+                                        if (parseInt(securityInput.value) !== expectedSum) {
+                                                showMessage("Por favor, resuelve la suma correctamente.", false);
+                                                return;
+                                        }
+
+                                        const formData = new FormData(form);
+
+                                        // Sanitización para prevenir Inyección / XSS
+                                        function sanitize(str) {
+                                                if (!str) return '';
+                                                return str.toString().replace(/[&<>"']/g, function(m) {
+                                                        return {
+                                                                '&': '&amp;',
+                                                                '<': '&lt;',
+                                                                '>': '&gt;',
+                                                                '"': '&quot;',
+                                                                "'": '&#039;'
+                                                        }[m];
+                                                });
+                                        }
+
+                                        formData.set('name', sanitize(formData.get('name')));
+                                        formData.set('email', sanitize(formData.get('email')));
+                                        formData.set('message', sanitize(formData.get('message')));
+
+                                        const originalBtnText = submitBtn.innerHTML;
+                                        submitBtn.innerHTML = 'Enviando...';
+                                        submitBtn.disabled = true;
+
+                                        fetch(form.action, {
+                                                method: 'POST',
+                                                headers: { 
+                                                        'Accept': 'application/json'
+                                                },
+                                                body: formData
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                                if (data.success === "true" || data.success === true) {
+                                                        showMessage("Mensaje enviado correctamente, revisaremos tu solicitud a la brevedad", true);
+                                                        form.reset();
+                                                        generateMath();
+                                                } else {
+                                                        showMessage("En este momento no pudimos procesar tu solicitud, vuelve a intentarlo en unos minutos", false);
+                                                }
+                                        })
+                                        .catch(error => {
+                                                showMessage("En este momento no pudimos procesar tu solicitud, vuelve a intentarlo en unos minutos", false);
+                                        })
+                                        .finally(() => {
+                                                submitBtn.innerHTML = originalBtnText;
+                                                submitBtn.disabled = false;
+                                        });
+                                });
+
+                                function showMessage(msg, isSuccess) {
+                                        messageDiv.textContent = msg;
+                                        messageDiv.className = `rounded-xl p-4 text-sm font-medium transition-all ${isSuccess ? 'bg-vibrant-lime/20 text-[#4d6400] border border-vibrant-lime' : 'bg-red-100 text-red-800 border border-red-300'}`;
+                                        messageDiv.classList.remove('hidden');
+                                        setTimeout(() => {
+                                                messageDiv.classList.add('hidden');
+                                        }, 8000);
+                                }
+                        }
+                });
+        </script>
+
+        <!-- SCROLL TO TOP BUTTON -->
+        <a href="#hero-section" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-vibrant-lime text-dark-slate p-3 md:p-4 rounded-full shadow-lg shadow-vibrant-lime/40 hover:opacity-90 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl md:text-3xl font-bold">arrow_upward</span>
+        </a>
+
+
+
+</body>
+
+</html>
