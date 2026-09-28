@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ConsultancyPro - Best way to manage your customers</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-surface-variant": "#c4c9af",
+                "on-tertiary-fixed-variant": "#454268",
+                "on-tertiary-container": "#5b587f",
+                "tertiary-fixed-dim": "#c6c2ef",
+                "off-white": "#F5F3EE",
+                "on-secondary": "#30312e",
+                "error": "#ffb4ab",
+                "vibrant-lime": "#B8E62E",
+                "inverse-on-surface": "#2e3037",
+                "surface-container-highest": "#32353c",
+                "secondary-fixed": "#e4e2dd",
+                "primary-fixed-dim": "#a9d619",
+                "primary-fixed": "#c4f33c",
+                "outline-variant": "#444935",
+                "dark-slate": "#0E1117",
+                "tertiary": "#f5f0ff",
+                "secondary": "#c8c6c2",
+                "primary": "#deff86",
+                "on-tertiary-fixed": "#1a173a",
+                "on-background": "#e1e2eb",
+                "on-tertiary": "#2f2c50",
+                "primary-container": "#b8e62e",
+                "on-primary-container": "#4d6400",
+                "surface-tint": "#a9d619",
+                "on-secondary-fixed": "#1b1c19",
+                "surface-bright": "#363940",
+                "surface-dim": "#101319",
+                "surface-container-low": "#191c22",
+                "on-error-container": "#ffdad6",
+                "surface": "#101319",
+                "inverse-primary": "#4f6600",
+                "error-container": "#93000a",
+                "surface-variant": "#32353c",
+                "secondary-fixed-dim": "#c8c6c2",
+                "on-primary": "#273500",
+                "on-secondary-fixed-variant": "#474744",
+                "secondary-container": "#494946",
+                "on-primary-fixed": "#161f00",
+                "outline": "#8e937b",
+                "surface-container-lowest": "#0b0e14",
+                "on-surface": "#e1e2eb",
+                "background": "#101319",
+                "surface-container-high": "#272a31",
+                "inverse-surface": "#e1e2eb",
+                "surface-container": "#1d2026",
+                "on-secondary-container": "#b9b8b4",
+                "on-error": "#690005",
+                "tertiary-fixed": "#e4dfff",
+                "tertiary-container": "#d6d1ff",
+                "on-primary-fixed-variant": "#3b4d00"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "gutter-desktop": "24px",
+                "margin-desktop": "80px",
+                "gutter-mobile": "16px",
+                "container-max": "1280px",
+                "section-md": "64px",
+                "base": "8px",
+                "section-lg": "100px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Outfit"
+                ],
+                "headline-xl-mobile": [
+                        "Outfit"
+                ],
+                "body-lg": [
+                        "Outfit"
+                ],
+                "label-lg": [
+                        "Outfit"
+                ],
+                "headline-sm": [
+                        "Outfit"
+                ],
+                "headline-lg-mobile": [
+                        "Outfit"
+                ],
+                "headline-lg": [
+                        "Outfit"
+                ],
+                "label-sm": [
+                        "Outfit"
+                ],
+                "headline-xl": [
+                        "Outfit"
+                ],
+                "headline-md": [
+                        "Outfit"
+                ],
+                "body-sm": [
+                        "Outfit"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body { background-color: #FFFFFF; color: #1e293b; }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .ambient-shadow { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
+        .hero-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%); z-index: -1; pointer-events: none; }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes scroll-vertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased overflow-x-hidden selection:bg-vibrant-lime selection:text-dark-slate bg-off-white">
+<!-- 1. HEADER (TopNavBar) -->
+<header class="bg-transparent fixed top-0 z-50 w-full transition-all duration-300" id="main-header">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<a class="flex items-center gap-2" href="#">
+<img alt="ConsultancyPro Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7OSaYtOXwnk3GCuBPooUtPOEeGuv91apGxgJ39jbBc7K2b3f9Wf2zPbnbB2PwaDjgjwc1ueXFB5ximI386kXo_BpnpqXqS0JA0fLJsSUGZPxcYveLpWNCEq7-re64jw6lT1S7tltGAKNBRnfV06fSuygafbwuuxqXL2EO8rnPMSCed749Qjvlk9H48xEOQOz9jftGqPdpPJf4R0lTbSv0pb-79vNwRre4VnQHNi7DNKQQ9mZV7OtUZEOgn_DCg9ehzg" style="height: 100px; width: auto;"/>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-vibrant-lime font-bold border-b-2 border-vibrant-lime pb-1 transition-all duration-200" href="#">Demos</a>
+<a class="text-off-white font-medium hover:text-vibrant-lime transition-colors duration-200" href="#">Pages</a>
+<a class="text-off-white font-medium hover:text-vibrant-lime transition-colors duration-200" href="#">Projects</a>
+<a class="text-off-white font-medium hover:text-vibrant-lime transition-colors duration-200" href="#">Services</a>
+<a class="text-off-white font-medium hover:text-vibrant-lime transition-colors duration-200" href="#">Blog</a>
+<a class="text-off-white font-medium hover:text-vibrant-lime transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="hidden md:flex items-center">
+<a class="bg-vibrant-lime text-dark-slate px-6 py-2.5 rounded-full font-label-sm hover:opacity-90 transition-opacity shadow-lg shadow-vibrant-lime/30" href="#">Get Consultant</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-off-white p-2">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- 2. HERO -->
+<section class="relative pt-32 pb-48 overflow-hidden px-margin-mobile md:px-margin-desktop bg-cover bg-center bg-no-repeat" id="hero-section" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAs3trSfxJmrFTTWUv0BhUKqFehFylRcIpp538kzxyzG7NCsoS1EisFg3CNTJyBD7EZ-MULv_WBWbjZ27VKgdjzs9sA-H-BxNOElD90GoCho1Rkp2OzbjtJL0IiH7kqyjzyyADpxa6_Gj7XPkoShBsf5chXUjzmv7i4EcScI0gN3aK-qRkOEbyd3KHUMILoS2cpdk5Y6ucecjsaAIb0ysY3Kro3oFFaX6P4XRxucUohpTl-YrfjXKxhipvmkq0ue0-rxQ"); background-size: cover; background-position: center center; background-repeat: no-repeat; background-color: transparent;'>
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 flex flex-col gap-8 lg:-mt-24">
+<h1 class="text-5xl md:text-7xl text-off-white leading-tight font-bold">El mejor Match <br/><span class="text-vibrant-lime">Laboral.</span></h1>
+<p class="font-body-lg text-off-white/80 max-w-xl">Lorem impus is simply dummy text of the printing and 
+typesetting industry. Lorem Ipsum has been the industry's standard dummy
+ text ever since 1966. </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="flex items-center gap-3 bg-off-white border border-gray-200 px-6 py-3 rounded-full hover:border-vibrant-lime transition-colors group shadow-sm" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-vibrant-lime transition-colors text-dark-slate" style='font-variation-settings: "FILL" 1;'>file_download</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-500 uppercase tracking-wider leading-none">Download on the</span>
+<span class="font-medium text-sm leading-tight text-dark-slate">App Store</span>
+</div>
+</a>
+<a class="flex items-center gap-3 bg-off-white border border-gray-200 px-6 py-3 rounded-full hover:border-vibrant-lime transition-colors group shadow-sm" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-vibrant-lime transition-colors text-dark-slate">play_arrow</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-500 uppercase tracking-wider leading-none">Get it on</span>
+<span class="font-medium text-sm leading-tight text-dark-slate">Google Play</span>
+</div>
+</a>
+</div>
+</div>
+<div class="relative z-10 flex justify-center lg:justify-end mt-12 lg:mt-0">
+<img alt="App Interface Mockup" class="max-w-full h-auto drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9lwIupCCQF18r5e_NsFmeWHZAdjhvHnIwoAIjeD071AYt_IiBjiOFhCd075klEW0xkgJ9ORBW16bX1wT2idKiJVsETOPXeLZ71AKL22i8650Z3E4lFQyBBFZ4KX8oOrZgeGNwv6pZ7fXuzLiIDvi3kWAoMT3BsP5ItqmdklF19O93dl2wu0RSxA5wSqac6Fv0xK8QpyecyWqysXmNprQtF8sl-Mmmdl4rmvvXtQq-1wiKwwMMr9VLJu_2e3y8PNf2zA" style="max-height: 700px;"/>
+</div>
+</div>
+</section>
+<!-- WORKFLOW AUTOMATION SECTION -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-off-white relative overflow-hidden" style="background-color: #F5F3EE;">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-6">
+<h3 class="text-vibrant-lime font-label-sm uppercase tracking-widest border border-vibrant-lime/30 px-3 py-1 rounded-full w-max">Workflow Automation</h3>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-dark-slate">Automate repetitive tasks with ease.</h2>
+<p class="font-body-lg text-gray-600 max-w-xl">Streamline your operations with intelligent automation. Let AI task bots handle the busywork so your team can focus on what matters most.</p>
+<ul class="flex flex-col gap-4 mt-4">
+<li class="flex items-center gap-3 text-vibrant-lime"><span class="material-symbols-outlined">check_circle</span> AI-powered task bots</li>
+<li class="flex items-center gap-3 text-vibrant-lime"><span class="material-symbols-outlined">check_circle</span> 100+ Automations</li>
+<li class="flex items-center gap-3 text-vibrant-lime"><span class="material-symbols-outlined">check_circle</span> Enterprise Ready</li>
+</ul>
+</div>
+<div class="relative h-[400px] md:h-[500px] bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col p-6 shadow-xl">
+<div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white z-10 pointer-events-none"></div>
+<div class="flex flex-col gap-4 animate-[scroll-vertical_20s_linear_infinite] hover:[animation-play-state:paused] pt-[200px] md:pt-[250px]">
+<div class="bg-off-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm text-dark-slate" style="background-color: #B8E62E;">
+<div class="w-12 h-12 rounded-full bg-vibrant-lime/10 flex items-center justify-center text-vibrant-lime text-dark-slate"><span class="material-symbols-outlined">notifications</span></div>
+<div><h4 class="text-dark-slate font-medium">Send Reminders</h4><p class="text-gray-500 text-sm text-dark-slate">Automated push notifications</p></div>
+</div>
+<div class="bg-off-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm text-dark-slate" style="background-color: #B8E62E;">
+<div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-dark-slate"><span class="material-symbols-outlined">attach_money</span></div>
+<div><h4 class="text-dark-slate font-medium">Process Payments</h4><p class="text-gray-500 text-sm text-dark-slate">Invoice generation</p></div>
+</div>
+<div class="bg-off-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm text-dark-slate" style="background-color: #B8E62E;">
+<div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 text-dark-slate"><span class="material-symbols-outlined">group</span></div>
+<div><h4 class="text-dark-slate font-medium">Sync CRM</h4><p class="text-gray-500 text-sm text-dark-slate">Update customer records</p></div>
+</div>
+<div class="bg-off-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm text-dark-slate" style="background-color: #B8E62E;">
+<div class="w-12 h-12 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-400 text-dark-slate"><span class="material-symbols-outlined">share</span></div>
+<div><h4 class="text-dark-slate font-medium">Social Posting</h4><p class="text-gray-500 text-sm text-dark-slate">Cross-platform sharing</p></div>
+</div>
+<div class="bg-off-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm text-dark-slate" style="background-color: #B8E62E;">
+<div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-dark-slate"><span class="material-symbols-outlined">bar_chart</span></div>
+<div><h4 class="text-dark-slate font-medium">Generate Reports</h4><p class="text-gray-500 text-sm text-dark-slate">Weekly analytics</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. COUNTER -->
+<!-- 4. FEATURES -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-off-white" style="background-color: rgb(245, 243, 238);">
+<div class="max-w-container-max mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-4">
+<span class="text-vibrant-lime font-label-sm uppercase tracking-widest">Core Features</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-dark-slate">Powerful tools to boost your productivity.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-off-white border border-gray-200 shadow-sm rounded-2xl p-8 hover:border-vibrant-lime/50 hover:shadow-md transition-all duration-300 flex flex-col gap-6 mt-8 md:mt-0 relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-5 group-hover:opacity-10 transition-opacity bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida/AP1WRLuZRQf2nqFgDiBJqSEpHnMS8Ts19RVeUAPvTrjLG2k1AA1ebegN41cj__dcqqHE65deogTJzSA9ilnj2NnEmr-AocqUCFAbE14LigP-AtPn0tzHC3rBmXq2x4x5mgWpcl5v2eKiVBGb0xK1FEcOCAOp5AmsnrGyLue4oFhIsmyIZ5--ChY3e98E34U9Bm5rJ-vKa5u8vHv1ysAQIlnUmPdr-R-werIUtkteC0emsvDrV4540xpo6hjY4A");'></div>
+<div class="relative z-10 w-16 h-16 rounded-xl bg-vibrant-lime/10 flex items-center justify-center text-vibrant-lime">
+<span class="material-symbols-outlined text-3xl">speed</span>
+</div>
+<h3 class="font-headline-md text-xl text-dark-slate relative z-10">Lightning Fast</h3>
+<p class="font-body-md text-gray-600 relative z-10">Optimized for speed and performance, ensuring your customers never have to wait.</p>
+</div>
+<!-- Feature 2 (Elevated) -->
+<div class="bg-gradient-to-b from-off-white to-gray-50 border border-vibrant-lime/30 rounded-2xl p-8 transform md:-translate-y-4 shadow-lg flex flex-col gap-6 relative overflow-hidden group">
+<div class="absolute inset-0 bg-vibrant-lime/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute inset-0 z-0 opacity-5 group-hover:opacity-10 transition-opacity bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida/AP1WRLuKwbC2b5HKkS6cd7d2db-9rm2ERELK18ymto3e04yu89ipppqF07DoRJH2GmbHLYnYUTsU0a71OEJNtzaDu_iZqFgQbheIQ8AxVAfB_XuyLgAMLKyYoIO05PlvATEEy2hWAaNY4-VS5d-pYXBNdmq1KT_ojXHkVkuoDJxcqfpCh-BmfU9i0JvaVWPotZ9kHruiZhKn_vwjPjnxD9bjdcYwXFhY-3ZtO-QzA7L6m5sFRchRc448mUS5Hg0");'></div>
+<div class="w-16 h-16 rounded-xl bg-vibrant-lime flex items-center justify-center text-dark-slate relative z-10 shadow-md shadow-vibrant-lime/20">
+<span class="material-symbols-outlined text-3xl">security</span>
+</div>
+<h3 class="font-headline-md text-xl text-dark-slate relative z-10">Bank-grade Security</h3>
+<p class="font-body-md text-gray-600 relative z-10">Your data is encrypted and protected with industry-leading security protocols.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-off-white border border-gray-200 shadow-sm rounded-2xl p-8 hover:border-vibrant-lime/50 hover:shadow-md transition-all duration-300 flex flex-col gap-6 mt-8 md:mt-0 relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-5 group-hover:opacity-10 transition-opacity bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida/AP1WRLsXMZTQ7738aqMGD_DVJEm4pAKdePzmvj5FhlSeDqyXRzb-FivqEwA7QSm_Fs2pIUSw-G6LKdPua-eaKlEKf2WTtpA-oimmv_I7ctKH9Z51kxoBq07NrracBCdEvMtvvqWcr6EhRKAFy4Ain8dG9m8Wx5o8XhhWhGpOLGtKP_xGMYunLsx2-m31q98XD7PGnPEu-ro9HTSWvfLgx60PKq879a4qODuz3aHfA5LsnuCKIRxIFlBT3gw_fTM");'></div>
+<div class="relative z-10 w-16 h-16 rounded-xl bg-vibrant-lime/10 flex items-center justify-center text-vibrant-lime">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<h3 class="font-headline-md text-xl text-dark-slate relative z-10">Advanced Analytics</h3>
+<p class="font-body-md text-gray-600 relative z-10">Gain actionable insights with comprehensive reporting and real-time data tracking.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. INTERACTIVE SHOWCASE -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-off-white" style="background-color: rgb(245, 243, 238);">
+<div class="max-w-container-max mx-auto flex flex-col gap-24">
+<!-- Row 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<img alt="Interactive App Showcase" class="rounded-2xl shadow-xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLua2Bp0P9P_0noh7sXbyDcVPpCZKtLVTscZUyW60uhQiMgQAA2bMw_243XAYxaznh6hTL-Y6GQMoV3UVUoOfusVDug-MBm_snC_DXzK9MZZRqNJ9a7to65p0mST92PQnQoczGoacegGyWjULeR4JSz8tEZ2BvbctfI-wFAr_Iq_3xo3I0tJe0bQfCBcFB5jcHHPCTQu8L544mw1rI1nC1NDwXZQw82UaccNBq3QAsyJ6n_Xg2WYQX5qSEk"/>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-vibrant-lime font-label-sm uppercase tracking-widest">Connect Seamlessly</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-dark-slate">Built for teams to collaborate efficiently.</h2>
+<p class="font-body-lg text-gray-600">Streamline your workflow with real-time communication tools integrated directly into your workspace.</p>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-6 lg:order-1 order-2">
+<span class="text-vibrant-lime font-label-sm uppercase tracking-widest">Mobile Ready</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-dark-slate">Manage everything on the go.</h2>
+<p class="font-body-lg text-gray-600">Our fully responsive mobile application ensures you never miss a beat, no matter where you are.</p>
+</div>
+<div class="lg:order-2 order-1">
+<img alt="Mobile App Showcase" class="rounded-2xl shadow-xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvf-jrkDYAmRC4e0Y7V-HNOMvpwa_OzNtpBivX3Zg199U3l3HnZv75rmZ-YQQ4vg-sQysAkeHwqeVVWf7-zU5Uab01Jy8R21G4RRYHc0n_LzjudLFVKRLxNGFmBAcKTNrGCl5QuOnBL86stcnETvzNex3nu9Q_6s3FDbenBIOjgXGekJHxLTLl6HW56QeWFSyw9JSeVNPWUM5Nwbwy_iAln5ZCHMlknsARhzGYPogWIJkmXeE3ELf6fdLw"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 8. FOOTER -->
+<footer class="bg-off-white border-t border-gray-200" style="background-color: rgb(245, 243, 238);">
+<div class="max-w-container-max mx-auto py-section-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<img alt="ConsultancyPro Logo" class="h-8 object-contain w-max" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9rveSPYXHODPusU0a7JiWKNV7uF3BC9qckZzjHGhxql4buna8ZQoVA45EA5DQlw76nogE8Qgaymw9NfrEUkaIfUn_w3ln0iAGogewaAqgMSDYuUybMZ2fVg0ko92S_hLKwqaOMjPFgmb4ugoqKMIj7fjYi2pTO7jmuDMTf6qz4-xHO2cATHrFh5zqfK_OBpb4PrnQ0xXMuALy-MGZz3VX-lT4FsIpolF_PKJgx-aUmAUQHElfKbJD9_VSy_uyzbsbJw" style="height: 100px; width: auto;"/>
+<p class="text-gray-600 font-body-md">Built for high-performance reliability. Empowering teams to achieve more.</p>
+<div class="flex gap-4">
+<a class="text-gray-500 hover:text-vibrant-lime transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-gray-500 hover:text-vibrant-lime transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-sm text-dark-slate uppercase tracking-widest">Company</h4>
+<a class="text-gray-600 hover:text-vibrant-lime transition-colors duration-200" href="#">Company Bio</a>
+<a class="text-gray-600 hover:text-vibrant-lime transition-colors duration-200" href="#">Services</a>
+<a class="text-gray-600 hover:text-vibrant-lime transition-colors duration-200" href="#">Case Studies</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-sm text-dark-slate uppercase tracking-widest">Legal</h4>
+<a class="text-gray-600 hover:text-vibrant-lime transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-gray-600 hover:text-vibrant-lime transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-sm text-dark-slate uppercase tracking-widest">Newsletter</h4>
+<p class="text-gray-600 font-body-md text-sm">Subscribe to get latest updates.</p>
+<div class="relative mt-2">
+<input class="w-full bg-off-white border border-gray-200 rounded-full py-3 pl-4 pr-12 text-dark-slate focus:border-vibrant-lime focus:ring-1 focus:ring-vibrant-lime outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="absolute right-1 top-1 bottom-1 w-10 bg-vibrant-lime rounded-full flex items-center justify-center text-dark-slate hover:bg-opacity-90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 py-6 text-center">
+<p class="text-gray-500 text-sm">© 2024 ConsultancyPro. Built for high-performance reliability.</p>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const hero = document.getElementById('hero-section');
+        
+        window.addEventListener('scroll', () => {
+            if (hero && window.scrollY > hero.offsetHeight - 80) {
+                header.classList.remove('bg-transparent');
+                header.classList.add('bg-dark-slate');
+            } else {
+                header.classList.add('bg-transparent');
+                header.classList.remove('bg-dark-slate');
+            }
+        });
+    });
+</script>
+</body></html>
